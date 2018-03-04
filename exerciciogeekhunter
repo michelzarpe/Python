@@ -1,0 +1,56 @@
+'''
+The code above read data from input and print data to output
+'''
+
+for i in range(0, 4):
+    value = raw_input()
+    temEspaco =0
+    nTemMaiuscula=0;
+    temLetarMinuscula=0;
+    temLetarMaiuscula=0;
+    value = value.split(",")
+    email=value[0];
+    senha=value[1];
+    senhaConfirmacao=value[2];
+    emailMinusculo = email.lower();
+
+    
+    if emailMinusculo == email:
+        nTemMaiuscula=1;
+    else:
+        nTemMaiuscula=0;
+     
+       
+        
+    tamanhoEmail = len(email)
+    
+    if tamanhoEmail > 6:
+        tamanhoMinimo=1
+    else:
+        tamanhoMinimo=0;
+
+    if tamanhoEmail < 121:
+        tamanhoMaximo=1
+    else:
+        tamanhoMaximo=0;
+        
+    temesaco = len(senha.split(" "))   
+    
+    
+    senhaMaiuscula=email.upper();
+    senhaMinuscula=email.lower();
+    
+    if senhaMaiuscula == email.upper():
+        temLetarMinuscula=1
+        
+    if senhaMaiuscula == email.upper():
+        temLetarMaiuscula=1
+    
+    if tamanhoMaximo == 1 and tamanhoMinimo == 1 and nTemMaiuscula == 1 and senhaConfirmacao.replace("]","")==senha and temesaco<3 : 
+        print("Verdadeiro")
+    else:
+        print("falso")
+        
+        
+        
+    print value
